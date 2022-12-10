@@ -1,10 +1,11 @@
 import React from "react";
+import { Scrollbar } from 'react-scrollbars-custom';
 
 const Scroll = (props) => {
     return (
-        <div style={{ overflowY: 'scroll', height: '800px' }}>
+        <Scrollbar style={{ height: 700 }}>
             {props.children}
-        </div>
+        </Scrollbar>
     );
 };
 
