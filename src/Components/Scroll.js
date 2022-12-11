@@ -3,7 +3,7 @@ import { Scrollbar } from 'react-scrollbars-custom';
 
 const Scroll = (props) => {
     return (
-        <Scrollbar style={{ height: 700 }}>
+        <Scrollbar style={{ height: '75vh' }}>
             {props.children}
         </Scrollbar>
     );
