@@ -10,9 +10,11 @@ function App() {
     console.log(c++)
     const [robots, setRobots] = useState([]);
     const [searchfield, setSearchfield] = useState('')
-    fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(users => setRobots(users));
+
+    if(!robots)
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(users => setRobots(users));
 
     const onSearchChange = (event) => {
         setSearchfield(event.target.value);
